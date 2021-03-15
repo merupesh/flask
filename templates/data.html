@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>This is visualized data</h1>
+
+{{plot}}
+<h1>{{result}}</h1>
+<h1>{{sql_data}}</h1>
+
+<h1>List data </h1>
+<table>
+{% for data in list_data  %}
+        <tr>
+          <td>{{data[0]}}</td>
+        </tr>
+{% endfor %}
+ </table>
+
+<h1>{{lists}}</h1>
+
+
+
+</body>
+</html>

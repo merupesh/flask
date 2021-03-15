@@ -1,0 +1,140 @@
+
+{% extends "layout.html" %}
+{% block body %}
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('{{url_for('static', filename = 'img/home-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Clean Blog</h1>
+            <span class="subheading">A Blog Theme by Start Bootstrap</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <div class="container">
+    <div class="row">
+
+
+
+         <!-- Todo: Fetch it using for loop from the database -->
+
+
+         <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">names</th>
+      <th scope="col">email</th>
+      <th scope="col">phone</th>
+      <th scope="col">message</th>
+      <th scope="col">date</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for mail in mails  %}
+        <tr>
+          <td>{{mail.names}}</td>
+          <td>{{mail.email}}</td>
+          <td>{{mail.phone}}</td>
+          <td>{{mail.message}}</td>
+          <td>{{mail.date}}</td>
+        </tr>
+   {% endfor %}
+  </tbody>
+</table>
+
+        <h1>another table</h1>
+
+         <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">names</th>
+      <th scope="col">email</th>
+      <th scope="col">phone</th>
+      <th scope="col">message</th>
+      <th scope="col">date</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for mail in mails  %}
+        <tr>
+          <td>{{mail.names}}</td>
+          <td>{{mail.email}}</td>
+          <td>{{mail.phone}}</td>
+          <td>{{mail.message}}</td>
+          <td>{{mail.date}}</td>
+        </tr>
+   {% endfor %}
+  </tbody>
+</table>
+
+        <div>
+         <ul>
+         {% for  mail_pages in range( mail_pages) %}
+            <li><a href="{{pages}}">{{ mail_pages+1}}</a></li>
+         {% endfor %}
+
+             <style>
+                 ul {
+                   text-decoration: none;
+                 }
+                  ul li
+                  {
+                    float:left;
+                    text-decoration: none;
+                    padding-left:10px;
+                    display =  block
+
+                 }
+             </style>
+
+     </ul>
+</div>
+        </table>
+
+        <h1>email table</h1>
+
+         <table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">names</th>
+      <th scope="col">count</th>
+
+    </tr>
+  </thead>
+  <tbody>
+   {% for email in email  %}
+        <tr>
+<!--          <td>{{email.names}}</td>-->
+          <td>{{email[1]}}</td>
+
+        </tr>
+   {% endfor %}
+  </tbody>
+</table>
+
+        <h1>Simple Line Chart</h1>
+<!-- bar chart canvas element -->
+{{plot}}
+        {{labels}}
+        {{sizes}}
+        {{rupesh}}
+
+        {{mailss}}
+
+
+
+
+
+        <!-- Pager -->
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+

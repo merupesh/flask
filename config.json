@@ -1,0 +1,16 @@
+{
+  "params":
+  {
+    "local_server" : "True",
+    "local_uri":"mysql://root:@localhost/flask",
+    "prod_uri": "mysql://root:@localhost/flask",
+    "fb_url": "https://www.codewithharry.com/videos/web-dev-using-flask-and-python-10",
+    "gmail-user":"rupesh.bhandari2000@gmail.com",
+    "gmail-password":"Rupeshbhandari2000@gmail",
+    "no_of_posts":2,
+    "aduser": "admin",
+    "adpass": "admin",
+    "upload_location":"D:\\rupesh"
+
+  }
+}
